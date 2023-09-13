@@ -30,7 +30,7 @@
 
 
 
-let isLoggedIn = 
+let isLoggedIn = null
 
 let booleanIsLoogedIn = Boolean(isLoggedIn)
 console.log(typeof booleanIsLoogedIn)
