@@ -41,7 +41,7 @@ const obj3 = {obj, obj1, obj2} // ismai objects combine nhi hote hain given obje
 // const obj4 = Object.assign({},obj, obj1, obj2) //this is a best practice because curly braces {} shows target and other values show sources but we use it less
 
 const obj4 = {...obj, ...obj1, ...obj2}
-console.log(obj4)
+// console.log(obj4)
 
 
 //jab bhi database se values aayegi tho values ko hum arrays k andar object bnakar store krte hai
@@ -65,13 +65,47 @@ const users = [
 
 users[1].email;
 
-console.log(tinderUser)
+// console.log(tinderUser)
 //print keys
-console.log(Object.keys(tinderUser))
+// console.log(Object.keys(tinderUser))
 // values
-console.log(Object.values(tinderUser))
+// console.log(Object.values(tinderUser))
 //print entries
-console.log(Object.entries(tinderUser))
+// console.log(Object.entries(tinderUser))
 
 //agar check karna hai ki koi property object k andar hai ya nhi
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
+
+//now we are going to do how destructing an object
+const course = {
+    courseName: "Js in Hindi",
+    price: 999,
+    courseInstructor: "Meenu Mishra"
+}
+
+//course.courseInstructor //to accessing object through dot operator instead of this we can use another way.
+
+const {courseInstructor} = course
+console.log(courseInstructor)
+
+//we can give a name to resize the name
+const {courseInstructor : instructor} = course
+console.log(instructor);
+
+
+
+//API --> yeh vo tool hota hai jispar hum apna kaam daal dete hai. it means values aati hai backend se tho un values ko kaise hum likhte hai. pehle k time mai vo values aati thi XML format mai but ab JSON format i.e object. API object or arrays do format mai hote hai.
+
+//JSON Format is only curly braces {}. in this keys also in the form of string
+// {
+//     "name": "Meenu",
+//     "courseName": "Js In Hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
